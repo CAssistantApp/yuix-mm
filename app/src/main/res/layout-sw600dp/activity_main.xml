@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_liquid_light"
+    android:fitsSystemWindows="false">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/videoSkipLayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/homeLayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="76dp"
+        android:paddingTop="54dp"
+        android:paddingRight="152dp"
+        android:paddingBottom="54dp">
+
+        <LinearLayout
+            android:layout_width="292dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="86dp"
+                android:layout_height="86dp"
+                android:background="@drawable/bg_orb_white"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Y"
+                android:textColor="#FFFFFFFF"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:alpha="0.64"
+                android:letterSpacing="0.32"
+                android:text="YUIX"
+                android:textColor="#58708D"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="36dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_stage_glass"
+            android:elevation="3dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="46dp">
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="YUIX"
+                android:textColor="#223A55"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detailText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:alpha="0.64"
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"
+                android:maxLines="2"
+                android:text="准备就绪"
+                android:textColor="#5C7189"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomDock"
+        android:layout_width="104dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginTop="46dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="46dp"
+        android:background="@drawable/bg_bottom_dock"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp">
+
+        <ImageButton
+            android:id="@+id/actionConnect"
+            style="@style/DockIconButton.Tablet"
+            android:contentDescription="连接"
+            android:src="@drawable/ic_connect" />
+
+        <ImageButton
+            android:id="@+id/actionOverview"
+            style="@style/DockIconButton.Tablet"
+            android:contentDescription="概览"
+            android:src="@drawable/ic_overview" />
+
+        <ImageButton
+            android:id="@+id/actionTasks"
+            style="@style/DockIconButton.Tablet"
+            android:contentDescription="任务"
+            android:src="@drawable/ic_tasks" />
+
+        <ImageButton
+            android:id="@+id/actionServices"
+            style="@style/DockIconButton.Tablet"
+            android:contentDescription="服务"
+            android:src="@drawable/ic_services" />
+
+        <ImageButton
+            android:id="@+id/actionFiles"
+            style="@style/DockIconButton.Tablet"
+            android:contentDescription="文件"
+            android:src="@drawable/ic_files" />
+
+        <ImageButton
+            android:id="@+id/actionLogs"
+            style="@style/DockIconButton.Tablet"
+            android:contentDescription="日志"
+            android:src="@drawable/ic_logs" />
+
+        <ImageButton
+            android:id="@+id/actionRoot"
+            style="@style/DockIconButton.Tablet"
+            android:contentDescription="Root 管理"
+            android:src="@drawable/ic_root" />
+
+        <ImageButton
+            android:id="@+id/actionSettings"
+            style="@style/DockIconButton.Tablet"
+            android:contentDescription="设置"
+            android:src="@drawable/ic_settings" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/skipHint"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/bg_video_skip_hint"
+        android:elevation="3dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="16dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="应用图标"
+            android:src="@drawable/ic_app_mark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="点击屏幕跳过"
+            android:textColor="#EAF6FF"
+            android:textSize="12sp" />
+    </LinearLayout>
+</FrameLayout>
